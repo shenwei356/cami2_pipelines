@@ -91,7 +91,8 @@ def bracken_to_cami(profile, outstream):
                       "F": "family",
                       "O": "order",
                       "C": "class",
-                      "P": "phylum"}
+                      "P": "phylum",
+                      "D": "superkingdom"}
     with open(profile, 'r') as fh:
         for line in fh:
             if not line.startswith("name\ttaxonomy_id"):
@@ -137,7 +138,8 @@ def centrifuge_to_cami(profile, outstream):
                       "F": "family",
                       "O": "order",
                       "C": "class",
-                      "P": "phylum"}
+                      "P": "phylum",
+                      "D": "superkingdom"}
     with open(profile, 'r') as fh:
         for line in fh:
             (rel_abd, count, specific_count, level, taxid, name) = [
